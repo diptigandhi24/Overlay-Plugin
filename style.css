@@ -11,3 +11,17 @@
   z-index: 2;
   cursor: pointer;
 }
+.eqWrap {
+  display: flex;
+  padding: 40px;
+}
+.equalHW {
+  flex: 1;
+  height: 400px;
+}
+
+.equalHW {
+  background-color: pink;
+  border: 1px solid red;
+  padding: 20px;
+}
