@@ -6,18 +6,22 @@
 class overlay {
   constructor() {
     this.modalBtn = document.getElementsByClassName("modal");
-
-    this.createModalContainer = () => {
-      let modalContainer = document.createElement("div");
-      modalContainer.classList.add("overlay");
-      return modalContainer;
-    };
+    this.modalContainer = document.createElement("div");
+    this.modalContainer.classList.add("overlay");
     this.openModal = () => {
       document
         .getElementById("overlayWrapper")
-        .appendChild(this.createModalContainer());
+        .appendChild(this.modalContainer);
     };
+
     this.modalBtn[0].addEventListener("click", this.openModal);
+
+    this.closeModal = () => {
+      document
+        .getElementById("overlayWrapper")
+        .removeChild(this.modalContainer);
+    };
+    this.modalContainer.addEventListener("click", this.closeModal);
   }
 }
 
