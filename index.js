@@ -8,6 +8,5 @@ class overlay {
     };
   }
 }
-let instance = new overlay(500, 500);
-let button = document.getElementById("display1");
-button.addEventListener("click", instance.test);
+
+new overlay();
