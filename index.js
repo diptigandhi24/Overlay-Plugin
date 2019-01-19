@@ -14,7 +14,9 @@ class overlay {
         .appendChild(this.modalContainer);
     };
 
-    this.modalBtn[0].addEventListener("click", this.openModal);
+    Object.keys(this.modalBtn).forEach(el => {
+      this.modalBtn[el].addEventListener("click", this.openModal);
+    });
 
     this.closeModal = () => {
       document
